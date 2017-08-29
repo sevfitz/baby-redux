@@ -1,15 +1,15 @@
-import { UPDATESALUTATION, UPDATENAME, RESET } from './greeter.constants';
+import { UPDATE_SALUTATION, UPDATE_NAME, RESET } from './greeter.constants';
 
 export function updateSalutation(salutation = 'Hello') {
     return {
-        type: UPDATESALUTATION,
+        type: UPDATE_SALUTATION,
         payload: salutation
     };
 }
 
 export function updateName (name = 'Stranger') {
     return {
-        type: UPDATENAME,
+        type: UPDATE_NAME,
         payload: name
     };
 }
