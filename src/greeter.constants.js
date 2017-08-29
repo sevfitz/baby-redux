@@ -1,0 +1,3 @@
+export const UPDATESALUTATION = 'UPDATESALUTATION';
+export const UPDATENAME = 'UPDATENAME';
+export const RESET = 'RESET';

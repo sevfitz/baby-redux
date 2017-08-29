@@ -8,9 +8,10 @@ export function Greeter({ salutation, name, dispatch }) {
             <GreetingDisplay name={name} salutation={salutation}/>
             <form>
                 <label htmlFor="salutation">Salutation:</label>
-                <input id="salutation" name="salutation" onChange={() => dispatch(updateSalutation())} ></input>
+                <input id="salutation" name="salutation" onChange={(e) => dispatch(updateSalutation(e.target.value))} ></input>
+                <br/>
                 <label htmlFor="name">Name:</label>
-                <input id="name" name="name" onChange={() => dispatch(updateName())}></input>
+                <input id="name" name="name" onChange={e => dispatch(updateName(e.target.value))}></input>
                 <button type="reset" onClick={() => dispatch(reset())} >Reset</button>
             </form>
         </div>
@@ -20,7 +21,7 @@ export function Greeter({ salutation, name, dispatch }) {
 export function GreetingDisplay({ salutation, name }) {
     return (
         <div>
-            <span>{ salutation }</span>
+            <span>{ salutation } </span>
             <span>{ name }</span>!
         </div>
     );
