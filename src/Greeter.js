@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { updateSalutation, updateName, reset } from './greeter.actions';
 
 export function Greeter({ salutation, name, dispatch }) {
+    console.log('dispatch is', dispatch);
     return (
         <div>
             <GreetingDisplay name={name} salutation={salutation}/>
